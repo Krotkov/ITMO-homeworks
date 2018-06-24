@@ -182,35 +182,35 @@ lib/fast:
 	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/build
 .PHONY : lib/fast
 
-BitSeq.o: BitSeq.cpp.o
+BitSet.o: BitSet.cpp.o
 
-.PHONY : BitSeq.o
+.PHONY : BitSet.o
 
 # target to build an object file
-BitSeq.cpp.o:
-	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSeq.cpp.o
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSeq.cpp.o
-.PHONY : BitSeq.cpp.o
+BitSet.cpp.o:
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSet.cpp.o
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSet.cpp.o
+.PHONY : BitSet.cpp.o
 
-BitSeq.i: BitSeq.cpp.i
+BitSet.i: BitSet.cpp.i
 
-.PHONY : BitSeq.i
+.PHONY : BitSet.i
 
 # target to preprocess a source file
-BitSeq.cpp.i:
-	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSeq.cpp.i
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSeq.cpp.i
-.PHONY : BitSeq.cpp.i
+BitSet.cpp.i:
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSet.cpp.i
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSet.cpp.i
+.PHONY : BitSet.cpp.i
 
-BitSeq.s: BitSeq.cpp.s
+BitSet.s: BitSet.cpp.s
 
-.PHONY : BitSeq.s
+.PHONY : BitSet.s
 
 # target to generate assembly for a file
-BitSeq.cpp.s:
-	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSeq.cpp.s
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSeq.cpp.s
-.PHONY : BitSeq.cpp.s
+BitSet.cpp.s:
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSet.cpp.s
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSet.cpp.s
+.PHONY : BitSet.cpp.s
 
 Tree.o: Tree.cpp.o
 
@@ -367,9 +367,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... testing"
 	@echo "... lib"
-	@echo "... BitSeq.o"
-	@echo "... BitSeq.i"
-	@echo "... BitSeq.s"
+	@echo "... BitSet.o"
+	@echo "... BitSet.i"
+	@echo "... BitSet.s"
 	@echo "... Tree.o"
 	@echo "... Tree.i"
 	@echo "... Tree.s"

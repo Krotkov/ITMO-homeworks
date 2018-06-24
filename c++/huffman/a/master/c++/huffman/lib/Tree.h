@@ -5,7 +5,7 @@
 #ifndef LIB_TREE_H
 #define LIB_TREE_H
 
-#include "BitSeq.h"
+#include "BitSet.h"
 #include <vector>
 
 class Tree {
@@ -24,8 +24,8 @@ class Tree {
 private:
     Node* root;
     Node* cur;
-    std::vector <BitSeq> codes;
-    void createCodes(Tree::Node *v, BitSeq& cd);
+    std::vector <BitSet> codes;
+    void createCodes(Tree::Node *v, BitSet& cd);
 
 public:
     Tree();
@@ -36,7 +36,7 @@ public:
     bool isTerminal();
     void toRoot();
     unsigned char getCurSymbol();
-    BitSeq getCode(unsigned char symbol);
+    BitSet getCode(unsigned char symbol);
     bool isRoot();
 };
 

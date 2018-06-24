@@ -4,14 +4,14 @@ project(lib)
 set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCES huffman.cpp
-        Tree.cpp BitSeq.cpp)
+        Tree.cpp BitSet.cpp)
 
 set(TEST tests/huffman_testing.cpp
         tests/gtest/gtest-all.cc
         tests/gtest/gtest.h
         tests/gtest/gtest_main.cc)
 
-set(HEADERS Tree.h huffman.h BitSeq.h)
+set(HEADERS Tree.h huffman.h BitSet.h)
 
 add_library(lib ${SOURCES} ${HEADERS})
 

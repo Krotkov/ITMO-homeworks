@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp
+/home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp
 iostream
 -
-BitSeq.h
-/home/user/CLionProjects/HUFFMAN/lib/BitSeq.h
+BitSet.h
+/home/user/CLionProjects/HUFFMAN/lib/BitSet.h
 
-/home/user/CLionProjects/HUFFMAN/lib/BitSeq.h
+/home/user/CLionProjects/HUFFMAN/lib/BitSet.h
 vector
 -
 
@@ -25,8 +25,8 @@ Tree.h
 /home/user/CLionProjects/HUFFMAN/lib/Tree.h
 
 /home/user/CLionProjects/HUFFMAN/lib/Tree.h
-BitSeq.h
-/home/user/CLionProjects/HUFFMAN/lib/BitSeq.h
+BitSet.h
+/home/user/CLionProjects/HUFFMAN/lib/BitSet.h
 vector
 -
 

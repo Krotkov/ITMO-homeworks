@@ -4,13 +4,9 @@
 #include "lib/Tree.h"
 #include "lib/huffman.h"
 
-void correctInput() {
-    std::cout << "usage: ./huffman <-c | -d> input output" << std::endl;
-}
-
 int main(int argc, char* argv[]) {
     if (argc != 4) {
-        correctInput();
+        std::cout << "Incorrect input\n";
         return 0;
     }
     auto option = std::string(argv[1]);
@@ -29,7 +25,7 @@ int main(int argc, char* argv[]) {
             std::cout << "Invalid file\n";
         }
     } else {
-        correctInput();
+        std::cout << "Incorrect input\n";
     }
     return 0;
 }

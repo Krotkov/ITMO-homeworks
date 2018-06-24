@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lib.dir/huffman.cpp.o"
   "CMakeFiles/lib.dir/Tree.cpp.o"
-  "CMakeFiles/lib.dir/BitSeq.cpp.o"
+  "CMakeFiles/lib.dir/BitSet.cpp.o"
   "liblib.pdb"
   "liblib.a"
 )

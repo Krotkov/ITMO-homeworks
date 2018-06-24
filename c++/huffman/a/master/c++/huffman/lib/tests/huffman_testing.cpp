@@ -5,119 +5,90 @@
 
 TEST(correctness, empty) {
     std::stringstream in("");
-    std::stringstream comp;
-    std::stringstream dec;
+    std::stringstream c;
+    std::stringstream d;
 
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+
+    EXPECT_EQ(in.str(), d.str());
 }
 
-TEST(correctness, one_char) {
-    std::stringstream in("#");
-    std::stringstream comp;
-    std::stringstream dec;
+TEST(correctness, one_symbol) {
+    std::stringstream in("a");
+    std::stringstream c;
+    std::stringstream d;
 
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+
+    EXPECT_EQ(in.str(), d.str());
 }
 
-TEST(correctness, sentence) {
-    std::stringstream in("I can do it.");
-    std::stringstream comp;
-    std::stringstream dec;
-
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
-}
-
-TEST(correctness, all_chars) {
+TEST(correctness, all_char) {
     std::stringstream in;
-    std::stringstream comp;
-    std::stringstream dec;
+    std::stringstream c;
+    std::stringstream d;
 
-    for (auto i = -128; i <= 127; ++i) {
-        in << (char) i;
+    for (int i = -128; i <= 127; i++) {
+        in << char(i);
     }
 
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+
+    EXPECT_EQ(in.str(), d.str());
 }
 
-TEST(correctness, big_file) {
-    for (int i = 0; i < 4; ++i) {
-        std::stringstream in;
-        std::stringstream comp;
-        std::stringstream dec;
-
-        for (auto i = 0; i < 1024 * 1024; ++i) {
-            char b = rand() % 256;
-            in << b;
-        }
-
-        Huffman::compress(in, comp);
-        Huffman::decompress(comp, dec);
-        EXPECT_EQ(in.str(), dec.str());
-    }
-}
-
-TEST(correctness, invalid_decoder) {
-    std::stringstream comp;
-    std::stringstream dec;
-    comp << "#34233";
-    EXPECT_EQ(false, Huffman::decompress(comp, dec));
-}
-
-TEST(correctness, all_same_char) {
+TEST(correctness, rand_big) {
     std::stringstream in;
-    std::stringstream comp;
-    std::stringstream dec;
+    std::stringstream c;
+    std::stringstream d;
 
-    for (auto i = 0; i < 1024 * 1024; ++i) {
-        char b = 'a';
-        in << b;
+    for (int i = 0; i < int(1e7); i++) {
+        in << (char(rand() % 256));
     }
 
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+
+    EXPECT_EQ(in.str(), d.str());
 }
 
-TEST(correctness, two_chars) {
+TEST(correctness, invalid_file) {
+    std::stringstream c;
+    std::stringstream d("");
+
+    c << "abacabadaaba";
+
+    EXPECT_EQ(false, Huffman::decompress(c, d));
+}
+
+TEST(correctness, null_string) {
     std::stringstream in;
-    std::stringstream comp;
-    std::stringstream dec;
+    std::stringstream c;
+    std::stringstream d;
 
-    char a[2] = {'a', 'b'};
-    for (auto i = 0; i < 1024 * 1024; ++i) {
-        in << a[rand() % 2];
+    for (int i = 0; i < 100; i++) {
+        in << char(0);
     }
 
-    Huffman::compress(in, comp);
-    Huffman::decompress(comp, dec);
-    EXPECT_EQ(in.str(), dec.str());
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+
+    EXPECT_EQ(in.str(), d.str());
 }
 
-TEST(correctness, compress_compressed) {
-    for (int i = 0; i < 4; ++i) {
-        std::stringstream in;
-        std::stringstream comp;
-        std::stringstream comp2;
-        std::stringstream dec2;
-        std::stringstream dec;
+TEST(correctness, equal_compressing) {
+    std::stringstream in;
+    std::stringstream c;
+    std::stringstream d;
 
-        for (auto i = 0; i < 1024 * 1024; ++i) {
-            char b = rand() % 256;
-            in << b;
-        }
-
-        Huffman::compress(in, comp);
-        Huffman::compress(comp, comp2);
-        Huffman::decompress(comp2, dec2);
-        Huffman::decompress(dec2, dec);
-        EXPECT_EQ(in.str(), dec.str());
+    for (int i = 0; i < 2000; i++) {
+        in << char(rand() % 256);
     }
+
+    Huffman::compress(in, c);
+    Huffman::compress(in, d);
+    EXPECT_EQ(c.str(), d.str());
 }

@@ -72,11 +72,11 @@ void Tree::buildTree(unsigned long long *mas) {
     }
     root = *se.begin();
     cur = root;
-    BitSeq a;
+    BitSet a;
     createCodes(root, a);
 }
 
-void Tree::createCodes(Tree::Node *v, BitSeq &cd) {
+void Tree::createCodes(Tree::Node *v, BitSet &cd) {
     if (v->son(false) == nullptr && v->son(true) == nullptr) {
         if (cd.size() == 0) cd.add(false);
         unsigned char c = v->getSymbol();
@@ -91,7 +91,7 @@ void Tree::createCodes(Tree::Node *v, BitSeq &cd) {
     cd.pop();
 }
 
-BitSeq Tree::getCode(unsigned char symbol) {
+BitSet Tree::getCode(unsigned char symbol) {
     return codes[symbol];
 }
 

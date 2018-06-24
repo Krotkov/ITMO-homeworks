@@ -47,7 +47,7 @@ void Huffman::compress(std::istream &in, std::ostream &out) {
     for (int i = 7; i >= 0; i--) {
         out.put((unsigned char) (numOfBits >> (i * 8)));
     }
-    BitSeq ans;
+    BitSet ans;
     copy_len = len;
     while (copy_len != 0) {
         size_t loop = copy_len < READ_BLOCK_SIZE ? copy_len : READ_BLOCK_SIZE;
