@@ -10,8 +10,8 @@
 void Huffman::compress(std::istream &in, std::ostream &out) {
     in.seekg(0, in.end);
     auto len = (size_t) in.tellg();
-    if (in.peek() == EOF) return;
     in.seekg(std::istream::beg);
+    if (in.peek() == EOF) return;
     unsigned long long num[256];
     std::fill(num, num + 256, 0);
     unsigned char notEmptySymbols = 0;
