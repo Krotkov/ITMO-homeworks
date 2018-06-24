@@ -1,6 +1,8 @@
 //
 // Created by user on 20.06.18.
 //
+//bin/zgrep
+
 
 #include <iosfwd>
 #include <cstring>
@@ -113,25 +115,26 @@ bool Huffman::decompress(std::istream &in, std::ostream &out) {
     }
     char w[WRITE_BLOCK_SIZE];
     char r[READ_BLOCK_SIZE];
-    short pos = 0;
+    int pos = 0;
     size_t copy_len = len / 8 + (len % 8 != 0);
     while (copy_len != 0) {
         size_t loop = copy_len < READ_BLOCK_SIZE ? copy_len : READ_BLOCK_SIZE;
         copy_len -= loop;
-        in.read(r, READ_BLOCK_SIZE);
+        in.read(r, loop);
         for (size_t i = 0; i < loop; i++) {
             for (size_t j = 0; j < 8; j++) {
-                if (i * 8 + j >= len) break;
-                auto flag = bool(1 & (r[i] >> (7 - j)));
-                huffman_tree.move(flag);
-                if (huffman_tree.isTerminal()) {
-                    w[pos] = huffman_tree.getCurSymbol();
-                    pos++;
-                    if (pos == WRITE_BLOCK_SIZE) {
-                        out.write(w, WRITE_BLOCK_SIZE);
-                        pos = 0;
+                if (i * 8 + j < len) {
+                    auto flag = bool(1 & (r[i] >> (7 - j)));
+                    huffman_tree.move(flag);
+                    if (huffman_tree.isTerminal()) {
+                        w[pos] = huffman_tree.getCurSymbol();
+                        pos++;
+                        if (pos == WRITE_BLOCK_SIZE) {
+                            out.write(w, WRITE_BLOCK_SIZE);
+                            pos = 0;
+                        }
+                        huffman_tree.toRoot();
                     }
-                    huffman_tree.toRoot();
                 }
             }
         }
@@ -139,7 +142,9 @@ bool Huffman::decompress(std::istream &in, std::ostream &out) {
     }
     if (!huffman_tree.isRoot()) return false;
     if (pos != 0) {
-        out.write(w, pos);
+        std::cout << pos;
+        std::cout << w[pos-1] << "\n";
+        out.write(w, pos-10);
     }
     return true;
 }
