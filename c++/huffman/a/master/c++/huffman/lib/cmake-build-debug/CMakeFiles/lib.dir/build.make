@@ -105,42 +105,42 @@ CMakeFiles/lib.dir/Tree.cpp.o.provides: CMakeFiles/lib.dir/Tree.cpp.o.requires
 CMakeFiles/lib.dir/Tree.cpp.o.provides.build: CMakeFiles/lib.dir/Tree.cpp.o
 
 
-CMakeFiles/lib.dir/BitSeq.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/BitSeq.cpp.o: ../BitSeq.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lib.dir/BitSeq.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lib.dir/BitSeq.cpp.o -c /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp
+CMakeFiles/lib.dir/BitSet.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/BitSet.cpp.o: ../BitSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lib.dir/BitSet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lib.dir/BitSet.cpp.o -c /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp
 
-CMakeFiles/lib.dir/BitSeq.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/BitSeq.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp > CMakeFiles/lib.dir/BitSeq.cpp.i
+CMakeFiles/lib.dir/BitSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/BitSet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp > CMakeFiles/lib.dir/BitSet.cpp.i
 
-CMakeFiles/lib.dir/BitSeq.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/BitSeq.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp -o CMakeFiles/lib.dir/BitSeq.cpp.s
+CMakeFiles/lib.dir/BitSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/BitSet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp -o CMakeFiles/lib.dir/BitSet.cpp.s
 
-CMakeFiles/lib.dir/BitSeq.cpp.o.requires:
+CMakeFiles/lib.dir/BitSet.cpp.o.requires:
 
-.PHONY : CMakeFiles/lib.dir/BitSeq.cpp.o.requires
+.PHONY : CMakeFiles/lib.dir/BitSet.cpp.o.requires
 
-CMakeFiles/lib.dir/BitSeq.cpp.o.provides: CMakeFiles/lib.dir/BitSeq.cpp.o.requires
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSeq.cpp.o.provides.build
-.PHONY : CMakeFiles/lib.dir/BitSeq.cpp.o.provides
+CMakeFiles/lib.dir/BitSet.cpp.o.provides: CMakeFiles/lib.dir/BitSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/BitSet.cpp.o.provides.build
+.PHONY : CMakeFiles/lib.dir/BitSet.cpp.o.provides
 
-CMakeFiles/lib.dir/BitSeq.cpp.o.provides.build: CMakeFiles/lib.dir/BitSeq.cpp.o
+CMakeFiles/lib.dir/BitSet.cpp.o.provides.build: CMakeFiles/lib.dir/BitSet.cpp.o
 
 
 # Object files for target lib
 lib_OBJECTS = \
 "CMakeFiles/lib.dir/huffman.cpp.o" \
 "CMakeFiles/lib.dir/Tree.cpp.o" \
-"CMakeFiles/lib.dir/BitSeq.cpp.o"
+"CMakeFiles/lib.dir/BitSet.cpp.o"
 
 # External object files for target lib
 lib_EXTERNAL_OBJECTS =
 
 liblib.a: CMakeFiles/lib.dir/huffman.cpp.o
 liblib.a: CMakeFiles/lib.dir/Tree.cpp.o
-liblib.a: CMakeFiles/lib.dir/BitSeq.cpp.o
+liblib.a: CMakeFiles/lib.dir/BitSet.cpp.o
 liblib.a: CMakeFiles/lib.dir/build.make
 liblib.a: CMakeFiles/lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library liblib.a"
@@ -154,7 +154,7 @@ CMakeFiles/lib.dir/build: liblib.a
 
 CMakeFiles/lib.dir/requires: CMakeFiles/lib.dir/huffman.cpp.o.requires
 CMakeFiles/lib.dir/requires: CMakeFiles/lib.dir/Tree.cpp.o.requires
-CMakeFiles/lib.dir/requires: CMakeFiles/lib.dir/BitSeq.cpp.o.requires
+CMakeFiles/lib.dir/requires: CMakeFiles/lib.dir/BitSet.cpp.o.requires
 
 .PHONY : CMakeFiles/lib.dir/requires
 

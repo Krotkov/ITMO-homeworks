@@ -170,11 +170,11 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp">
+		<Unit filename="/home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp">
 			<Option target="testing"/>
 			<Option target="lib"/>
 		</Unit>
-		<Unit filename="/home/user/CLionProjects/HUFFMAN/lib/BitSeq.h">
+		<Unit filename="/home/user/CLionProjects/HUFFMAN/lib/BitSet.h">
 			<Option target="testing"/>
 			<Option target="lib"/>
 		</Unit>

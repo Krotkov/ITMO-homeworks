@@ -40,7 +40,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lib" TYPE FILE FILES
     "/home/user/CLionProjects/HUFFMAN/lib/Tree.h"
     "/home/user/CLionProjects/HUFFMAN/lib/huffman.h"
-    "/home/user/CLionProjects/HUFFMAN/lib/BitSeq.h"
+    "/home/user/CLionProjects/HUFFMAN/lib/BitSet.h"
     )
 endif()
 

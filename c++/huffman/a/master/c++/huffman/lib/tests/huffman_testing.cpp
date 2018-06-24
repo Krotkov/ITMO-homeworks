@@ -92,3 +92,17 @@ TEST(correctness, equal_compressing) {
     Huffman::compress(in, d);
     EXPECT_EQ(c.str(), d.str());
 }
+
+TEST(correctness, similar_chars) {
+    std::stringstream in;
+    std::stringstream c;
+    std::stringstream d;
+
+    for (int i = 0; i < 10000; i++) {
+        in << 'a';
+    }
+
+    Huffman::compress(in, c);
+    Huffman::decompress(c, d);
+    EXPECT_EQ(in.str(), d.str());
+}

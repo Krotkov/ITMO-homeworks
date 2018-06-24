@@ -105,28 +105,28 @@ CMakeFiles/testing.dir/Tree.cpp.o.provides: CMakeFiles/testing.dir/Tree.cpp.o.re
 CMakeFiles/testing.dir/Tree.cpp.o.provides.build: CMakeFiles/testing.dir/Tree.cpp.o
 
 
-CMakeFiles/testing.dir/BitSeq.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/BitSeq.cpp.o: ../BitSeq.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing.dir/BitSeq.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/BitSeq.cpp.o -c /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp
+CMakeFiles/testing.dir/BitSet.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/BitSet.cpp.o: ../BitSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing.dir/BitSet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/BitSet.cpp.o -c /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp
 
-CMakeFiles/testing.dir/BitSeq.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/BitSeq.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp > CMakeFiles/testing.dir/BitSeq.cpp.i
+CMakeFiles/testing.dir/BitSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/BitSet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp > CMakeFiles/testing.dir/BitSet.cpp.i
 
-CMakeFiles/testing.dir/BitSeq.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/BitSeq.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp -o CMakeFiles/testing.dir/BitSeq.cpp.s
+CMakeFiles/testing.dir/BitSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/BitSet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp -o CMakeFiles/testing.dir/BitSet.cpp.s
 
-CMakeFiles/testing.dir/BitSeq.cpp.o.requires:
+CMakeFiles/testing.dir/BitSet.cpp.o.requires:
 
-.PHONY : CMakeFiles/testing.dir/BitSeq.cpp.o.requires
+.PHONY : CMakeFiles/testing.dir/BitSet.cpp.o.requires
 
-CMakeFiles/testing.dir/BitSeq.cpp.o.provides: CMakeFiles/testing.dir/BitSeq.cpp.o.requires
-	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSeq.cpp.o.provides.build
-.PHONY : CMakeFiles/testing.dir/BitSeq.cpp.o.provides
+CMakeFiles/testing.dir/BitSet.cpp.o.provides: CMakeFiles/testing.dir/BitSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/BitSet.cpp.o.provides.build
+.PHONY : CMakeFiles/testing.dir/BitSet.cpp.o.provides
 
-CMakeFiles/testing.dir/BitSeq.cpp.o.provides.build: CMakeFiles/testing.dir/BitSeq.cpp.o
+CMakeFiles/testing.dir/BitSet.cpp.o.provides.build: CMakeFiles/testing.dir/BitSet.cpp.o
 
 
 CMakeFiles/testing.dir/tests/huffman_testing.cpp.o: CMakeFiles/testing.dir/flags.make
@@ -205,7 +205,7 @@ CMakeFiles/testing.dir/tests/gtest/gtest_main.cc.o.provides.build: CMakeFiles/te
 testing_OBJECTS = \
 "CMakeFiles/testing.dir/huffman.cpp.o" \
 "CMakeFiles/testing.dir/Tree.cpp.o" \
-"CMakeFiles/testing.dir/BitSeq.cpp.o" \
+"CMakeFiles/testing.dir/BitSet.cpp.o" \
 "CMakeFiles/testing.dir/tests/huffman_testing.cpp.o" \
 "CMakeFiles/testing.dir/tests/gtest/gtest-all.cc.o" \
 "CMakeFiles/testing.dir/tests/gtest/gtest_main.cc.o"
@@ -215,7 +215,7 @@ testing_EXTERNAL_OBJECTS =
 
 testing: CMakeFiles/testing.dir/huffman.cpp.o
 testing: CMakeFiles/testing.dir/Tree.cpp.o
-testing: CMakeFiles/testing.dir/BitSeq.cpp.o
+testing: CMakeFiles/testing.dir/BitSet.cpp.o
 testing: CMakeFiles/testing.dir/tests/huffman_testing.cpp.o
 testing: CMakeFiles/testing.dir/tests/gtest/gtest-all.cc.o
 testing: CMakeFiles/testing.dir/tests/gtest/gtest_main.cc.o
@@ -231,7 +231,7 @@ CMakeFiles/testing.dir/build: testing
 
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/huffman.cpp.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/Tree.cpp.o.requires
-CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/BitSeq.cpp.o.requires
+CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/BitSet.cpp.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/tests/huffman_testing.cpp.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/tests/gtest/gtest-all.cc.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/tests/gtest/gtest_main.cc.o.requires

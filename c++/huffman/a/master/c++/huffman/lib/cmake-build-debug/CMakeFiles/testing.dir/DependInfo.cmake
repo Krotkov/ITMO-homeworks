@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/CLionProjects/HUFFMAN/lib/BitSeq.cpp" "/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles/testing.dir/BitSeq.cpp.o"
+  "/home/user/CLionProjects/HUFFMAN/lib/BitSet.cpp" "/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles/testing.dir/BitSet.cpp.o"
   "/home/user/CLionProjects/HUFFMAN/lib/Tree.cpp" "/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles/testing.dir/Tree.cpp.o"
   "/home/user/CLionProjects/HUFFMAN/lib/huffman.cpp" "/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles/testing.dir/huffman.cpp.o"
   "/home/user/CLionProjects/HUFFMAN/lib/tests/gtest/gtest-all.cc" "/home/user/CLionProjects/HUFFMAN/lib/cmake-build-debug/CMakeFiles/testing.dir/tests/gtest/gtest-all.cc.o"
