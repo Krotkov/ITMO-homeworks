@@ -86,7 +86,6 @@ bool Huffman::decompress(std::istream &in, std::ostream &out) {
     in.read((char *) &notEmptySymbol, 1);
     int notEmptySymbols = notEmptySymbol;
     if (notEmptySymbol == 0) notEmptySymbols = 256;
-    unsigned long long sum = 0;
     for (int i = 0; i < notEmptySymbols; i++) {
         unsigned char symbol;
         if (in.peek() == EOF) return false;
@@ -97,7 +96,6 @@ bool Huffman::decompress(std::istream &in, std::ostream &out) {
             in.read((char *) &c, 1);
             num[symbol] = (num[symbol] << 8) + c;
         }
-        sum += num[symbol];
         if (num[symbol] == 0) return false;
     }
     Tree huffman_tree;
