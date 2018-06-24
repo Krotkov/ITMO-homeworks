@@ -4,9 +4,9 @@
 #include "lib/Tree.h"
 #include "lib/huffman.h"
 
-int main() {
-    std::ifstream in("/bin/bzegrep", std::ifstream::binary);
-    std::ofstream out("q", std::ofstream::binary);
+/*int main() {
+    std::ifstream in("../bin/bzegrep", std::ifstream::binary);
+    std::ofstream out("../q", std::ofstream::binary);
     Huffman::compress(in, out);
     in.close();
     out.close();
@@ -16,9 +16,9 @@ int main() {
     in2.close();
     out2.close();
     return 0;
-}
+}*/
 
-/*int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     if (argc != 4) {
         std::cout << "Incorrect input\n";
         return 0;
@@ -42,4 +42,4 @@ int main() {
         std::cout << "Incorrect input\n";
     }
     return 0;
-}*/
+}

@@ -52,7 +52,7 @@ unsigned char *BitSet::write(bool f) {
         _size -= new_size;
         bits.pop_back();
     }
-    size_t len = _size / 8 + ((_size & 3) != 0);
+    size_t len = _size / 8 + ((_size % 8) != 0);
     auto ans = new unsigned char[len];
     for (size_t i = 0; i < bits.size(); i++) {
         for (int j = 7; j >= 0; j--) {
