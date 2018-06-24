@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Incorrect input\n";
         return 0;
     }
-    auto option = std::string(argv[1]);
+    auto mode = std::string(argv[1]);
     auto input = std::string(argv[2]);
     auto output = std::string(argv[3]);
     std::ifstream in(input, std::ifstream::binary);
@@ -18,9 +18,9 @@ int main(int argc, char* argv[]) {
         std::cout << "Can't open file" << std::endl;
         return 0;
     }
-    if (option == "-c") {
+    if (mode == "-c") {
         Huffman::compress(in, out);
-    } else if (option == "-d") {
+    } else if (mode == "-d") {
         if (!Huffman::decompress(in, out)) {
             std::cout << "Invalid file\n";
         }
