@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/testing.dir/huffman.cpp.o CMakeFiles/testing.dir/Tree.cpp.o CMakeFiles/testing.dir/BitSeq.cpp.o CMakeFiles/testing.dir/tests/huffman_testing.cpp.o CMakeFiles/testing.dir/tests/gtest/gtest-all.cc.o CMakeFiles/testing.dir/tests/gtest/gtest_main.cc.o  -o testing -lpthread 
