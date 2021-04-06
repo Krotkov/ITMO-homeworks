@@ -1,0 +1,4 @@
+/home/user/CLionProjects/HUFFMAN/lib/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/user/CLionProjects/HUFFMAN/lib/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/user/CLionProjects/HUFFMAN/lib/cmake-build-release/CMakeFiles/testing.dir
+/home/user/CLionProjects/HUFFMAN/lib/cmake-build-release/CMakeFiles/lib.dir
